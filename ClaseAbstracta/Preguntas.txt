@@ -1,0 +1,37 @@
+﻿Diferencia de entre clase abstracta y clase interfaz 
+
+En general, las clases abstractas y las interfaces se pueden usar para las mismas cosas, por eso te parecen iguales. Hay algunas diferencias importantes:
+
+- Las clases abstractas pueden contener código, mientras que las interfaces no. Aunque los métodos extensionales te permiten "hacer trampas" en este tema.
+
+- Una clase solo puede heredar de otra clase, mientras que puede implementar todas las interfaces que quiera. Normalmente una interfaz representa una funcionalidad
+que puede ser simplemente una parte de todo lo que hace un objeto. Por ejemplo, en una List<T> puedes añadir objetos, quitar objetos, acceder a los objetos... pero 
+la interfaz IEnumerable representa un concepto más concreto y específico: algo que se puede recorrer. Puede ser un List, un Tree, o a saber. Las clases abstractas 
+normalmente suelen estar un poco más relacionadas con las clases que las heredan que una interfaz (pero esto es un poco conceptual en el fondo).
+
+- Es posible versionar una clase abstracta sin romper a otras clases que las implementen, pero no es posible hacer lo mismo con una interfaz.
+Es decir, si tu tienes una clase abstracta, y le añades un método normal y corriente, las clases que heredan de esa clase abstracta siguen compilando 
+(a menos que tengan un método que se llama igual). Si tu a una interfaz le añades un método, todas las clases que implementan esa interfaz dejarán de compilar 
+porque no implementan ese método. Esto es algo importante si estás escribiendo librerías que usarán terceros. 
+
+Desarrollo : En la ClsNpc Tenemos una clase padre con 3 datos la cual se podra utilizar en la clase hio de esta forma la ClsMouestro podra usar los cambios o metodos abstractos utilizados
+en dicha clase abstracta de tal forma solo se podra añadir informacion /(No Cambiar datos de la clase abstracta)/ Teniendo en cuenta eso podremos dar valor a los metodos 
+
+ClsNpc = Clase Abstracta 
+ClsMounstro = Clase Hijo
+ClsSoldado = Clase Hijo 
+DañoAdicional = Clase Interfaz
+
+
+Principio Solid (Principio de segragacion de interfaces/ISP/): Este principio nos indica que no debemos dar informacion mas de la necesaria a los modulos para funcionar , para 
+esto tenemos que separar lo maximo que podemos las interfaces que existan en nuestro programa,para solamente dar una informacion especifica a  cierta interfaz
+
+Desarrollo : En nuestra DañoAdicional teniamos 2 metodos dañoarma(), dañoextra() estos metodos si bien es cierto pueden contener datros dependientes o no , pero si en el caso que no lo tuviera 
+estos metodos se separarian de tal forma no otorgan o mezclar informacion entre ambos metodos , tendriamos que separarlas en 2 interfaces IntDañoarma, IntDañoextra al tener 2 interfaces los llamamos 
+con la herencia a la interfaz principal donde hereda las 2 interfaces  , hay que tener en cuenta que una interfaz te ayuda a aumentar informacion dependiendo del uso del modulo
+
+IntDañoarma = Clase Interfaz
+IntDañoextra = Clase Interfaz
+DañoAdicional = Clase que hereda las interfaces
+
+

@@ -1,0 +1,7 @@
+D:\BD2\ClaseAbstracta\ClaseAbstracta\bin\Debug\ClaseAbstracta.exe.config
+D:\BD2\ClaseAbstracta\ClaseAbstracta\bin\Debug\ClaseAbstracta.exe
+D:\BD2\ClaseAbstracta\ClaseAbstracta\bin\Debug\ClaseAbstracta.pdb
+D:\BD2\ClaseAbstracta\ClaseAbstracta\obj\Debug\ClaseAbstracta.csprojAssemblyReference.cache
+D:\BD2\ClaseAbstracta\ClaseAbstracta\obj\Debug\ClaseAbstracta.csproj.CoreCompileInputs.cache
+D:\BD2\ClaseAbstracta\ClaseAbstracta\obj\Debug\ClaseAbstracta.exe
+D:\BD2\ClaseAbstracta\ClaseAbstracta\obj\Debug\ClaseAbstracta.pdb
